@@ -56,9 +56,17 @@ public class BinarySearchTree {
         }
 
         if (key <= node.data){
-            return findNode(node.leftChild, key);
+            if (node.leftChild == null){
+                return null;
+            } else {
+                return findNode(node.leftChild, key);
+            }
         } else if (key > node.data){
-            return findNode(node.rightChild, key);
+            if (node.rightChild == null) {
+                return null;
+            } else {
+                return findNode(node.rightChild, key);
+            }
         }
 
         return null;
@@ -74,8 +82,13 @@ public class BinarySearchTree {
             binaryTree.insert(data[i]);
         }
 
-        Node node = binaryTree.find(9);
-        System.out.println(node.data);
+        Node node = binaryTree.find(10);
+
+        if (node == null){
+            System.out.println("The number does not exist");
+        } else {
+            System.out.println("Node " + node.data + " was found");
+        }
     }
 
 }
