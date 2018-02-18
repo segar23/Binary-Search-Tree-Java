@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BinarySearchTree {
 
     /*
@@ -82,7 +84,12 @@ public class BinarySearchTree {
             binaryTree.insert(data[i]);
         }
 
-        Node node = binaryTree.find(10);
+        System.out.print("Enter the value to be searched: ");
+        Scanner scanner = new Scanner(System.in);
+        int key = scanner.nextInt();
+
+
+        Node node = binaryTree.find(key);
 
         if (node == null){
             System.out.println("The number does not exist");
