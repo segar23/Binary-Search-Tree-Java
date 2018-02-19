@@ -76,7 +76,13 @@ public class BinarySearchTree {
 
 
     public static void main (String [] args){
-        int [] data = {3,7,1,8,4,9,2,4,6,1};
+        int [] data = new int[10];
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < data.length; i++) {
+            System.out.print("Enter value " + i + " for the tree: ");
+            data[i] = scanner.nextInt();
+        }
 
         BinarySearchTree binaryTree = new BinarySearchTree();
 
@@ -85,7 +91,6 @@ public class BinarySearchTree {
         }
 
         System.out.print("Enter the value to be searched: ");
-        Scanner scanner = new Scanner(System.in);
         int key = scanner.nextInt();
 
 
